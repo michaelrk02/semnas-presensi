@@ -112,7 +112,7 @@ class Presence extends CI_Controller {
 
                             if ($this->form_validation->run()) {
                                 $this->presence->set($_SESSION['sso_id'], $session_id, $presence);
-                                $_SESSION['status'] = ['success', 'Form berhasil disimpan. Terima kasih atas partisipasi anda'];
+                                $_SESSION['status'] = ['success', 'Form berhasil disimpan dan sudah terkirim ke server. Terima kasih atas partisipasi anda. Anda dapat menutup laman ini apabila anda tidak ingin mengubah tanggapan anda (namun tanggapan masih dapat diubah sampai waktu untuk sesi ini ditutup)'];
                             } else {
                                 $_SESSION['status'] = ['danger', $this->form_validation->error_string()];
                             }
